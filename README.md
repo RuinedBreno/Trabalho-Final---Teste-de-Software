@@ -5,81 +5,101 @@ Dica: desinstala o chai
 e instala o chai
 npm install chai@4.3.7 chai-http@4.3.0 --save-dev
 
-Projeto de Testes em Node.js - Miniaplicativo de Rede Social
+# Teste de Software - Trabalho N2
 
-Este projeto foi desenvolvido como parte de um trabalho acadêmico com foco na aplicação de testes unitários, de API e de integração em um ambiente Node.js. O tema é um "Miniaplicativo de Rede Social / Blog", utilizando as APIs do JSONPlaceholder e My JSON Server como base.
+Este repositório contém o projeto desenvolvido para a avaliação N2 da disciplina de Teste de Software.
 
-🎯 Objetivos do Projeto
+## 📝 Descrição do Projeto
 
-    Desenvolver um projeto Node.js com estrutura de pastas definida. 
+O projeto consiste em um "Miniaplicativo de Rede Social / Blog" desenvolvido em Node.js, com o objetivo principal de aplicar um conjunto robusto de testes unitários, de API e de integração. As funcionalidades foram criadas de forma simples, focando na sua testabilidade, e utilizam como base as APIs do JSONPlaceholder e My JSON Server.
 
-Criar funções simples para permitir a aplicação de diferentes tipos de testes. 
+## 🎯 Objetivos Principais
 
-Aplicar testes unitários, de API e de integração com Mocha, Chai, Sinon e Chai-http. 
+- Desenvolver um projeto Node.js com uma estrutura de pastas bem definida. 
 
-Demonstrar o uso de assert, expect e should do Chai. 
+- Criar funções simples que sirvam como base para a aplicação de diversos tipos de testes. 
 
-🛠️ Ferramentas Utilizadas
+- Aplicar testes unitários, de API e de integração utilizando o ecossistema Mocha e Chai. 
 
-    Node.js: Ambiente de execução do JavaScript.
+- Demonstrar o uso prático das diferentes sintaxes de asserção do Chai: assert, expect e should. 
 
-    Mocha: Framework para execução dos testes. 
+## 🚀 Guia de Instalação e Configuração
 
-Chai: Biblioteca de asserções para verificação dos resultados. 
+Siga os passos abaixo para configurar o ambiente e executar o projeto.
 
-Sinon: Biblioteca para criar mocks e stubs. 
+### Pré-requisitos
 
-Chai-http: Plugin para o Chai para testes de requisições HTTP. 
+    - Node.js: Certifique-se de que o Node.js está instalado.
 
-Insomnia: Ferramenta para testes manuais de API. 
+    - Git: Certifique-se de que o Git está instalado.
 
-🚀 Como Configurar e Instalar
+### Passos para Instalação
 
-Pré-requisitos
+Clone o Repositório
+Abra seu terminal, navegue até o diretório onde deseja salvar o projeto e execute o comando:
 
-    Node.js instalado.
-
-    Git instalado.
-
-Passos de Instalação
-
-    Clone o repositório:
 ```
-git clone <URL-DO-SEU-REPOSITORIO>
-cd <NOME-DO-PROJETO>
+git clone https://github.com/sophialberton/teste-software-n2.git
+cd teste-software-n2
 ```
 
-
-Inicialize um projeto npm (caso ainda não tenha sido feito):
+### Inicialize o Projeto
 
 ```
 npm init -y
 ```
+Instale as Dependências
+Execute o comando abaixo para instalar as ferramentas de teste necessárias.
 
-Instale as dependências de desenvolvimento necessárias:
-```
-    npm install chai@4.3.7 chai-http@4.3.0 --save-dev
-```
-⚙️ Estrutura do Projeto
+    ⚠️ Dica Importante de Compatibilidade
+    Para evitar conflitos de versão entre as bibliotecas, é recomendado instalar estas versões específicas:
 
-A estrutura de pastas principal do projeto é a seguinte:
 ```
+    npm install mocha sinon chai@4.3.7 chai-http@4.3.0 --save-dev
+```
+🛠️ Ferramentas Utilizadas
+
+    Node.js: Ambiente de execução do código JavaScript no servidor.
+
+    Mocha: Framework que organiza e executa os testes.
+
+    Chai: Biblioteca de asserções que verifica se os resultados são os esperados.
+
+    Sinon: Biblioteca para a criação de mocks e stubs, essencial para isolar funções em testes.
+
+    Chai-http: Plugin que integra o Chai a requisições HTTP para testes de API.
+
+    Insomnia: Ferramenta visual para executar e depurar requisições de API manualmente.
+
+📁 Estrutura do Projeto
+
+O projeto está organizado da seguinte forma para separar claramente o código-fonte dos testes:
+
 /
-├── src/         # Contém o código-fonte (funções a serem testadas) [cite: 13]
+├── src/          # Contém o código-fonte (funções a serem testadas) [cite: 13]
 │   ├── users.js
 │   ├── posts.js
 │   ├── comments.js
 │   └── todos.js
-├── test/        # Contém os arquivos de teste [cite: 14]
-├── .gitignore   # Arquivos a serem ignorados pelo Git
-└── package.json # Configurações do projeto e dependências
-```
+├── test/         # Contém os arquivos de teste [cite: 14]
+├── .gitignore    # Arquivos e pastas ignorados pelo Git
+└── package.json  # Configurações do projeto e dependências
 
 ▶️ Como Executar os Testes
 
-Para executar todos os testes definidos na pasta test/, utilize o seguinte comando. É necessário configurar o script test no seu arquivo package.json para que ele execute o Mocha. 
+Para rodar o conjunto de testes, certifique-se de que seu package.json possui o script test configurado para executar o Mocha.
+
+Exemplo de configuração no package.json:
+JSON
+
+"scripts": {
+  "test": "mocha"
+}
+
+Com o script configurado, execute o seguinte comando no terminal:
 
 ```
 npm test
-
 ```
+
+Este comando irá executar todos os arquivos de teste localizados na pasta test/ e exibir os resultados no console.

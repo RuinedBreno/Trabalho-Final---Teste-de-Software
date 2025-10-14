@@ -2,5 +2,82 @@
   "devDependencies": {
     "chai": "^4.3.7",
     "chai-http": "^4.3.0"
-  }
+  },
+  "name": "teste-software-n2",
+  "version": "1.0.0",
+  "description": "Destinado ao trabalho da nota N2 da disciplina de teste de software",
+  "main": "node.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "assertion-error": "^1.1.0",
+    "asynckit": "^0.4.0",
+    "call-bind-apply-helpers": "^1.0.2",
+    "call-bound": "^1.0.4",
+    "check-error": "^1.0.3",
+    "combined-stream": "^1.0.8",
+    "component-emitter": "^1.3.1",
+    "cookiejar": "^2.1.4",
+    "core-util-is": "^1.0.3",
+    "debug": "^3.2.7",
+    "deep-eql": "^4.1.4",
+    "delayed-stream": "^1.0.0",
+    "dunder-proto": "^1.0.1",
+    "es-define-property": "^1.0.1",
+    "es-errors": "^1.3.0",
+    "es-object-atoms": "^1.1.1",
+    "es-set-tostringtag": "^2.1.0",
+    "extend": "^3.0.2",
+    "form-data": "^2.5.5",
+    "formidable": "^1.2.6",
+    "function-bind": "^1.1.2",
+    "get-func-name": "^2.0.2",
+    "get-intrinsic": "^1.3.0",
+    "get-proto": "^1.0.1",
+    "gopd": "^1.2.0",
+    "has-symbols": "^1.1.0",
+    "has-tostringtag": "^1.0.2",
+    "hasown": "^2.0.2",
+    "inherits": "^2.0.4",
+    "ip-regex": "^2.1.0",
+    "is-ip": "^2.0.0",
+    "isarray": "^1.0.0",
+    "loupe": "^2.3.7",
+    "math-intrinsics": "^1.1.0",
+    "methods": "^1.1.2",
+    "mime": "^1.6.0",
+    "mime-db": "^1.52.0",
+    "mime-types": "^2.1.35",
+    "ms": "^2.1.3",
+    "object-inspect": "^1.13.4",
+    "pathval": "^1.1.1",
+    "process-nextick-args": "^2.0.1",
+    "qs": "^6.14.0",
+    "readable-stream": "^2.3.8",
+    "safe-buffer": "^5.2.1",
+    "side-channel": "^1.1.0",
+    "side-channel-list": "^1.0.0",
+    "side-channel-map": "^1.0.1",
+    "side-channel-weakmap": "^1.0.2",
+    "string_decoder": "^1.1.1",
+    "superagent": "^3.8.3",
+    "type-detect": "^4.1.0",
+    "undici-types": "^7.14.0",
+    "util-deprecate": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophialberton/teste-software-n2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophialberton/teste-software-n2/issues"
+  },
+  "homepage": "https://github.com/sophialberton/teste-software-n2#readme"
 }
