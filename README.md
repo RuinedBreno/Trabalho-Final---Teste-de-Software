@@ -29,9 +29,9 @@ Siga os passos abaixo para configurar o ambiente e executar o projeto.
 
 ### Pré-requisitos
 
-    - Node.js: Certifique-se de que o Node.js está instalado.
+- Node.js: Certifique-se de que o Node.js está instalado.
 
-    - Git: Certifique-se de que o Git está instalado.
+- Git: Certifique-se de que o Git está instalado.
 
 ### Passos para Instalação
 
@@ -48,7 +48,7 @@ cd teste-software-n2
 ```
 npm init -y
 ```
-Instale as Dependências
+### Instale as Dependências
 Execute o comando abaixo para instalar as ferramentas de teste necessárias.
 
     ⚠️ Dica Importante de Compatibilidade
@@ -57,24 +57,24 @@ Execute o comando abaixo para instalar as ferramentas de teste necessárias.
 ```
     npm install mocha sinon chai@4.3.7 chai-http@4.3.0 --save-dev
 ```
-🛠️ Ferramentas Utilizadas
+## 🛠️ Ferramentas Utilizadas
 
-    Node.js: Ambiente de execução do código JavaScript no servidor.
+- Node.js: Ambiente de execução do código JavaScript no servidor.
 
-    Mocha: Framework que organiza e executa os testes.
+- Mocha: Framework que organiza e executa os testes.
 
-    Chai: Biblioteca de asserções que verifica se os resultados são os esperados.
+- Chai: Biblioteca de asserções que verifica se os resultados são os esperados.
 
-    Sinon: Biblioteca para a criação de mocks e stubs, essencial para isolar funções em testes.
+- Sinon: Biblioteca para a criação de mocks e stubs, essencial para isolar funções em testes.
 
-    Chai-http: Plugin que integra o Chai a requisições HTTP para testes de API.
+- Chai-http: Plugin que integra o Chai a requisições HTTP para testes de API.
 
-    Insomnia: Ferramenta visual para executar e depurar requisições de API manualmente.
+- Insomnia: Ferramenta visual para executar e depurar requisições de API manualmente.
 
-📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 O projeto está organizado da seguinte forma para separar claramente o código-fonte dos testes:
-
+```
 /
 ├── src/          # Contém o código-fonte (funções a serem testadas) [cite: 13]
 │   ├── users.js
@@ -84,17 +84,20 @@ O projeto está organizado da seguinte forma para separar claramente o código-f
 ├── test/         # Contém os arquivos de teste [cite: 14]
 ├── .gitignore    # Arquivos e pastas ignorados pelo Git
 └── package.json  # Configurações do projeto e dependências
+```
 
-▶️ Como Executar os Testes
+## ▶️ Como Executar os Testes
 
 Para rodar o conjunto de testes, certifique-se de que seu package.json possui o script test configurado para executar o Mocha.
 
 Exemplo de configuração no package.json:
+```
 JSON
 
 "scripts": {
   "test": "mocha"
 }
+```
 
 Com o script configurado, execute o seguinte comando no terminal:
 
