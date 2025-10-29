@@ -4,8 +4,8 @@ function createTodo(todoData) {
   }
 
   const newTodo = {
-    id: Math.floor(Math.random() * 100) + 201, // Gera um ID aleatório acima de 200
-    completed: false, // Por padrão, uma nova tarefa não está completa
+    id: Math.floor(Math.random() * 100) + 201, 
+    completed: false,
     ...todoData,
   };
 
@@ -46,7 +46,6 @@ function deleteTodo(todoId) {
   };
 }
 
-/* Filtra posts por uma palavra-chave presente no título. */
 function filterPostsByKeyword(postsList, keyword) {
   if (!Array.isArray(postsList) || typeof keyword !== 'string' || keyword.length === 0) {
     throw new Error('Lista de posts ou palavra-chave inválida para filtro.');
@@ -60,12 +59,9 @@ function filterPostsByKeyword(postsList, keyword) {
 }
 
 module.exports = {
-  createPost,
-  associatePostToUser,
-  getAllPosts,
-  getPostById,
-  getPostsByUserId,
-  updatePost,
-  deletePost,
+  createTodo,
+  getTodosByUserId,
+  markTodoAsCompleted,
+  deleteTodo,
   filterPostsByKeyword,
 };
