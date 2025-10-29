@@ -8,6 +8,6 @@
     { "id": 2, "body": "Excelente artigo.", "postId": 2 }
   ],
   "users": [
-    { "id": 101, "name": "Breno", "email": "breno@exemplo.com" }
+    { "id": 1, "name": "Breno", "email": "breno@exemplo.com" }
   ]
 }
