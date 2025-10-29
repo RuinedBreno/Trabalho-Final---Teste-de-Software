@@ -1,29 +1,4 @@
-/*
-Create (Criar):
-
-    addCommentToPost(postId, commentData): Função para adicionar um novo comentário a um post.
-
-Read (Ler):
-
-    getCommentsByPostId(postId): Função para listar todos os comentários de um post específico.
-
-Update (Atualizar):
-
-    updateComment(commentId, updatedText): Função para editar o texto de um comentário.
-
-Delete (Deletar):
-
-    deleteComment(commentId): Função para remover um comentário.
-*/
-
-/**
- * Adiciona um novo comentário a um post específico.
- * Em uma aplicação real, isso faria uma requisição POST para a API.
- *
- * @param {number} postId - O ID do post onde o comentário será adicionado.
- * @param {object} commentData - O objeto contendo os dados do novo comentário (ex: { title: '...', body: '...', email: '...' }).
- * @returns {object} O objeto do comentário criado.
- */
+/* Adiciona um novo comentário a um post específico. */
 function addCommentToPost(postId, commentData) {
   // Simulação: Validação simples dos dados de entrada
   if (!postId || !commentData || !commentData.body) {
@@ -40,13 +15,6 @@ function addCommentToPost(postId, commentData) {
   return newComment;
 }
 
-/**
- * Lista todos os comentários de um post específico.
- * Em uma aplicação real, faria uma requisição GET para a API (ex: /posts/{postId}/comments).
- *
- * @param {number} postId - O ID do post do qual os comentários serão listados.
- * @returns {Array} Um array de objetos de comentários.
- */
 function getCommentsByPostId(postId) {
   // Simulação: Validação do ID do post
   if (!postId || typeof postId !== 'number') {
@@ -60,14 +28,6 @@ function getCommentsByPostId(postId) {
   ];
 }
 
-/**
- * Edita o texto de um comentário existente.
- * Em uma aplicação real, faria uma requisição PUT ou PATCH para a API (ex: /comments/{commentId}).
- *
- * @param {number} commentId - O ID do comentário a ser atualizado.
- * @param {string} updatedText - O novo texto do corpo do comentário.
- * @returns {object} O objeto do comentário atualizado.
- */
 function updateComment(commentId, updatedText) {
   // Simulação: Validação dos dados
   if (!commentId || !updatedText) {
@@ -82,13 +42,6 @@ function updateComment(commentId, updatedText) {
   };
 }
 
-/**
- * Remove um comentário específico.
- * Em uma aplicação real, faria uma requisição DELETE para a API (ex: /comments/{commentId}).
- *
- * @param {number} commentId - O ID do comentário a ser removido.
- * @returns {object} Uma mensagem de confirmação.
- */
 function deleteComment(commentId) {
   // Simulação: Validação do ID
   if (!commentId) {
@@ -102,10 +55,35 @@ function deleteComment(commentId) {
   };
 }
 
+function countTotalComments(commentsList, authorUsername) {
+  if (!Array.isArray(commentsList) || typeof authorUsername !== 'string' || authorUsername.length === 0) {
+    // Esse erro pode ser capturado pelo assert.throws
+    throw new Error('Lista de comentários ou nome de usuário do autor inválido.');
+  }
+
+  let count = 0;
+  for (const comment of commentsList) {
+    if (comment.username && comment.username.toLowerCase() === authorUsername.toLowerCase()) {
+      count++;
+    }
+  }
+  return count;
+}
+
+// Lembre-se de exportar a nova função!
+module.exports = {
+  addCommentToPost,
+  getCommentsByPostId,
+  updateComment,
+  deleteComment,
+  countTotalComments, // <-- Adicione aqui
+};
+
 // Exporta as funções para que possam ser usadas em outros arquivos, como os de teste
 module.exports = {
   addCommentToPost,
   getCommentsByPostId,
   updateComment,
   deleteComment,
+  countTotalComments
 };

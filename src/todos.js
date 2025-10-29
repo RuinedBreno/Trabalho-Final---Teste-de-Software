@@ -1,29 +1,3 @@
-/*
-Create (Criar):
-
-    createTodo(todoData): Função para adicionar uma nova tarefa.
-
-Read (Ler):
-
-    getTodosByUserId(userId): Função para listar as tarefas de um usuário.
-
-Update (Atualizar):
-
-    markTodoAsCompleted(todoId): Função para marcar uma tarefa como concluída.
-
-Delete (Deletar):
-
-    deleteTodo(todoId): Função para excluir uma tarefa.
-
-*/
-
-/**
- * Adiciona uma nova tarefa para um usuário.
- * Em uma aplicação real, faria uma requisição POST para a API.
- *
- * @param {object} todoData - O objeto com os dados da tarefa (ex: { userId: 1, title: 'Nova tarefa', completed: false }).
- * @returns {object} O objeto da tarefa criada com um ID simulado.
- */
 function createTodo(todoData) {
   if (!todoData || !todoData.userId || !todoData.title) {
     throw new Error('Dados inválidos para criar a tarefa.');
@@ -38,19 +12,10 @@ function createTodo(todoData) {
   return newTodo;
 }
 
-/**
- * Lista todas as tarefas de um usuário específico.
- * Em uma aplicação real, faria uma requisição GET para /users/{userId}/todos.
- *
- * @param {number} userId - O ID do usuário.
- * @returns {Array} Um array com as tarefas do usuário.
- */
 function getTodosByUserId(userId) {
   if (!userId || typeof userId !== 'number') {
     throw new Error('ID do usuário inválido.');
   }
-
-  // Simula o retorno de uma lista de tarefas para um usuário
   return [
     { id: 1, userId: userId, title: 'Fazer compras', completed: false },
     { id: 2, userId: userId, title: 'Estudar testes', completed: true },
@@ -58,34 +23,18 @@ function getTodosByUserId(userId) {
   ];
 }
 
-/**
- * Marca uma tarefa como concluída.
- * Em uma aplicação real, faria uma requisição PATCH ou PUT para /todos/{todoId}.
- *
- * @param {number} todoId - O ID da tarefa a ser marcada como concluída.
- * @returns {object} O objeto da tarefa atualizada.
- */
 function markTodoAsCompleted(todoId) {
   if (!todoId) {
     throw new Error('ID da tarefa inválido.');
   }
-
-  // Simula a atualização do status da tarefa
   return {
     id: todoId,
-    userId: 1, // userId de exemplo
+    userId: 1, 
     title: 'Tarefa que foi concluída',
     completed: true,
   };
 }
 
-/**
- * Exclui uma tarefa.
- * Em uma aplicação real, faria uma requisição DELETE para /todos/{todoId}.
- *
- * @param {number} todoId - O ID da tarefa a ser excluída.
- * @returns {object} Uma mensagem de confirmação.
- */
 function deleteTodo(todoId) {
   if (!todoId) {
     throw new Error('ID da tarefa inválido.');
@@ -97,10 +46,26 @@ function deleteTodo(todoId) {
   };
 }
 
-// Exporta as funções
+/* Filtra posts por uma palavra-chave presente no título. */
+function filterPostsByKeyword(postsList, keyword) {
+  if (!Array.isArray(postsList) || typeof keyword !== 'string' || keyword.length === 0) {
+    throw new Error('Lista de posts ou palavra-chave inválida para filtro.');
+  }
+
+  const normalizedKeyword = keyword.toLowerCase();
+
+  return postsList.filter(post => 
+    post.title && post.title.toLowerCase().includes(normalizedKeyword)
+  );
+}
+
 module.exports = {
-  createTodo,
-  getTodosByUserId,
-  markTodoAsCompleted,
-  deleteTodo,
+  createPost,
+  associatePostToUser,
+  getAllPosts,
+  getPostById,
+  getPostsByUserId,
+  updatePost,
+  deletePost,
+  filterPostsByKeyword,
 };
