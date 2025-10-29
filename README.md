@@ -1,3 +1,6 @@
+# Trabalho-Final---Teste-de-Software
+Projeto de Teste de Software Nota 2 - Versão Final
+
 # teste-software-n2
 Destinado ao trabalho da nota N2 da disciplina de teste de software
 
