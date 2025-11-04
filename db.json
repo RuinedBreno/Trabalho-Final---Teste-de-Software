@@ -1,0 +1,13 @@
+{
+  "posts": [
+    { "id": 1, "title": "Primeiro Post Simulado", "author": "User1", "body": "Conteúdo inicial.", "views": 100 },
+    { "id": 2, "title": "Artigo N2", "author": "User2", "body": "Mais conteúdo.", "views": 50 }
+  ],
+  "comments": [
+    { "id": 1, "body": "Ótimo post!", "postId": 1 },
+    { "id": 2, "body": "Excelente artigo.", "postId": 2 }
+  ],
+  "users": [
+    { "id": 1, "name": "Breno", "email": "breno@exemplo.com" }
+  ]
+}
